@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-text">Rock Paper Scissors</h1>
+    </header>
+
+    <div class="score-table">
+      <div class="score-user">user</div>
+      <div class="score-comp">comp</div>
+      <span id="score-u" class="user-score">0</span> : <span id="score-c" class="comp-score">0</span>
+    </div>
+
+    <div class="result">
+      <h1>Paper Covers rock. You win!</h1>
+    </div>
+
+    <div class="game">
+      <div id="r" class="choice-rock">
+        <img src="/images/r.png" alt="r" />
+      </div>
+      <div id="p" class="choice-paper">
+        <img src="/images/p.png" alt="p" />
+      </div>
+      <div id="s" class="choice-scissors">
+        <img src="/images/s.png" alt="s" />
+      </div>
+    </div>
+
+    <p id="action-message">Make your move !</p>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
