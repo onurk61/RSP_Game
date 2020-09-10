@@ -3,7 +3,7 @@ let compScore = 0;
 const userScore_span = document.getElementById("score-u");
 const compScore_span = document.getElementById("score-c");
 const scoreTable_div = document.querySelector(".score-table");
-const result_h1 = document.querySelector(".result > h1");
+const result_h1 = document.querySelector(".result_h1");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
@@ -23,20 +23,20 @@ function win(userChoice, computerChoice) {
     const smallCompWord = "comp".fontsize(3).sub();
     result_h1.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You Win !`;
     document.getElementById(userChoice).classList.add('green-glow');
-    setTimeout(function(){
+    setTimeout(function () {
         document.getElementById(userChoice).classList.remove('green-glow');
     }, 300)
 }
 
 function lose(userChoice, computerChoice) {
-     compScore++;
-     userScore_span.innerHTML = userScore;
-     compScore_span.innerHTML = compScore;
-     const smallUserWord = "user".fontsize(3).sub();
+    compScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
-     result_h1.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You Lost...`;
-     document.getElementById(userChoice).classList.add('red-glow');
-    setTimeout(function(){
+    result_h1.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You Lost...`;
+    document.getElementById(userChoice).classList.add('red-glow');
+    setTimeout(function () {
         document.getElementById(userChoice).classList.remove('red-glow');
     }, 300)
 }
@@ -48,7 +48,7 @@ function draw(userChoice, computerChoice) {
     const smallCompWord = "comp".fontsize(3).sub();
     result_h1.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals to ${convertToWord(computerChoice)}${smallCompWord}. It's a draw !`;
     document.getElementById(userChoice).classList.add('gray-glow');
-    setTimeout(function(){
+    setTimeout(function () {
         document.getElementById(userChoice).classList.remove('gray-glow');
     }, 300)
 }
@@ -66,14 +66,17 @@ function game(userChoice) {
         case "pr":
         case "sp":
             win(userChoice, computerChoice);
+        break;
         case "rp":
         case "ps":
         case "sr":
             lose(userChoice, computerChoice);
+        break;
         case "rr":
         case "pp":
         case "ss":
             draw(userChoice, computerChoice);
+        break;
     }
 }
 
