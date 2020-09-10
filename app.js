@@ -22,6 +22,10 @@ function win(userChoice, computerChoice) {
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_h1.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You Win !`;
+    document.getElementById(userChoice).classList.add('green-glow');
+    setTimeout(function(){
+        document.getElementById(userChoice).classList.remove('green-glow');
+    }, 300)
 }
 
 function lose(userChoice, computerChoice) {
@@ -31,6 +35,10 @@ function lose(userChoice, computerChoice) {
      const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
      result_h1.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You Lost...`;
+     document.getElementById(userChoice).classList.add('red-glow');
+    setTimeout(function(){
+        document.getElementById(userChoice).classList.remove('red-glow');
+    }, 300)
 }
 
 function draw(userChoice, computerChoice) {
@@ -39,6 +47,10 @@ function draw(userChoice, computerChoice) {
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_h1.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals to ${convertToWord(computerChoice)}${smallCompWord}. It's a draw !`;
+    document.getElementById(userChoice).classList.add('gray-glow');
+    setTimeout(function(){
+        document.getElementById(userChoice).classList.remove('gray-glow');
+    }, 300)
 }
 
 function convertToWord(letter) {

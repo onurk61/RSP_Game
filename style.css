@@ -82,3 +82,27 @@ body {
     color:red;
     font-size: 30px;
 }
+.green-glow:hover{
+  /* border: 4px solid #4dcc7d; */
+  /* box-shadow: 0 0 10px #31b43a; */
+  border: 4px solid green;
+  box-shadow: 0 0 10px darkgreen;
+  background-color: darkgreen;
+  transform: skew(30deg, -30deg);
+}
+.red-glow:hover{
+  /* border: 4px solid #fc121b; */
+  /* box-shadow: 0 0 10px #d01115; */
+  border: 4px solid red;
+  box-shadow: 0 0 10px darkred;
+  background-color: darkred;
+  transform: skew(30deg, -30deg);
+}
+.gray-glow:hover{
+  /* border: 4px solid #464647; */
+  /* box-shadow: 0 0 10px #25292b; */
+  border: 4px solid gray;
+  box-shadow: 0 0 10px darkslategray;
+  background-color: gray;
+  transform: skew(30deg, -30deg);
+}
